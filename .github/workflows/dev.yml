@@ -8,5 +8,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: pwd
-      - run: ls -alt
+      - run: ls -alt ../
       - run: docker build .

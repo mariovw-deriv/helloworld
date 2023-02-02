@@ -37,19 +37,16 @@ jobs:
   helm-deployment:
     runs-on: 'ubuntu-latest'
     steps:
-    - uses: actions/checkout@v3
-    - name: 'Deploy'
-      uses: 'deliverybot/helm@v1'
-      with:
-        release: 'helloworld'
-        namespace: 'dev'
-        chart: 'app'
-        token: '${{ github.token }}'
-        values: |
-          name: foobar
-        value-files: >-
-        [
-          "values.yaml"
-        ]
-      env:
-        KUBECONFIG_FILE: '${{ secrets.KUBECONFIG }}'
+      - uses: actions/checkout@v3
+      - name: 'Deploy'
+        uses: 'deliverybot/helm@v1'
+        with:
+          release: 'helloworld'
+          namespace: 'dev'
+          chart: 'app'
+          token: '${{ github.token }}'
+          values: |
+            name: foobar
+          value-files: ["values.yaml"]
+        env:
+          KUBECONFIG_FILE: '${{ secrets.KUBECONFIG }}'

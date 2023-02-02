@@ -7,4 +7,5 @@ jobs:
   build-docker:
     runs-on: ubuntu-latest
     steps:
+      - run: ls -alt
       - run: docker build .

@@ -34,11 +34,8 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-  helm-deployment:
-    runs-on: 'ubuntu-latest'
-    steps:
-      - uses: actions/checkout@v3
-      - name: 'Deploy'
+
+      - name: 'Deploy with Helm'
         uses: 'deliverybot/helm@v1'
         with:
           release: 'helloworld'

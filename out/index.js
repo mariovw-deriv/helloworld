@@ -1,4 +1,5 @@
-'use strict';
+"use strict";
+console.log('starting server');
 var Koa = require('koa');
 var Router = require('@koa/router');
 var app = new Koa();

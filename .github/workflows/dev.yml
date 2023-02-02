@@ -6,8 +6,6 @@ on:
 jobs:
   build-docker:
     runs-on: ubuntu-latest
-    steps:
-    runs-on: ubuntu-latest
     permissions:
       contents: read
       packages: write

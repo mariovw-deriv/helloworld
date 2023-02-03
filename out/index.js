@@ -5,7 +5,7 @@ var Router = require('@koa/router');
 var app = new Koa();
 var router = new Router();
 router.get('koa-example', '/', function (ctx) {
-    ctx.body = 'Hello World';
+    ctx.body = 'Hello World:' + process.env.TEST;
 });
 app
     .use(router.routes())

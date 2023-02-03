@@ -7,7 +7,7 @@ const app = new Koa();
 const router = new Router();
 
 router.get('koa-example', '/', (ctx:any) => {
-  ctx.body = 'Hello World';
+  ctx.body = 'Hello World:' + process.env.TEST;
 });
 
 app

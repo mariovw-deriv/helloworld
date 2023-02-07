@@ -16,4 +16,8 @@ app
 
 app.listen(8080);
 
+router.get('koa-example', '/ping', (ctx:any) => {
+  ctx.body = 'pong';
+});
+
 console.log('listening on port 8080');
